@@ -12,17 +12,17 @@
     },
     "STATUS_TABS": [
       {
-        "NAME": "Öffnen",
+        "NAME": "Offen",
         "KEY": "openCount"
       },
       {
-        "NAME": "Aufgelöst",
+        "NAME": "Gelöst",
         "KEY": "allConvCount"
       }
     ],
     "ASSIGNEE_TYPE_TABS": [
       {
-        "NAME": "Bergwerk",
+        "NAME": "Meine",
         "KEY": "me",
         "COUNT_KEY": "mineCount"
       },
@@ -39,12 +39,16 @@
     ],
     "CHAT_STATUS_ITEMS": [
       {
-        "TEXT": "Öffnen",
+        "TEXT": "Offen",
         "VALUE": "open"
       },
       {
-        "TEXT": "Aufgelöst",
+        "TEXT": "Gelöst",
         "VALUE": "resolved"
+      },
+      {
+        "TEXT": "Bot",
+        "VALUE": "bot"
       }
     ],
     "ATTACHMENTS": {
@@ -72,6 +76,9 @@
         "ICON": "ion-link",
         "CONTENT": "hat eine URL geteilt"
       }
-    }
+    },
+    "RECEIVED_VIA_EMAIL": "Received via email",
+    "VIEW_TWEET_IN_TWITTER": "View tweet in Twitter",
+    "REPLY_TO_TWEET": "Reply to this tweet"
   }
 }

@@ -1,15 +1,19 @@
 /* global axios */
 
-const API_VERSION = `/api/v1`;
+const DEFAULT_API_VERSION = 'v1';
 
 class ApiClient {
   constructor(resource, options = {}) {
-    this.apiVersion = API_VERSION;
+    this.apiVersion = `/api/${options.apiVersion || DEFAULT_API_VERSION}`;
     this.options = options;
     this.resource = resource;
   }
 
   get url() {
+    return `${this.baseUrl()}/${this.resource}`;
+  }
+
+  baseUrl() {
     let url = this.apiVersion;
     if (this.options.accountScoped) {
       const isInsideAccountScopedURLs = window.location.pathname.includes(
@@ -21,7 +25,8 @@ class ApiClient {
         url = `${url}/accounts/${accountId}`;
       }
     }
-    return `${url}/${this.resource}`;
+
+    return url;
   }
 
   get() {
